@@ -1,0 +1,13 @@
+1- Escrever no INPUT a TAREFA e a HORA
+    * Pegar o que escreve nos inputs 
+        -fiz isso com onChange nos inputs
+    * Guardar tudo num objeto
+        -como posso guardar num objeto?X
+        -com spread não da pq vai adicionar um objeto vazio no primeiro submit que mandoX
+        -preciso fazer com que:
+            # não repita
+            # não adicione um objeto em branco X
+    * Colocar o que escreve na pagina principal
+2- Clicar no BOTÃO e ADICIONAR A TAREFA e a HORA na PAGINA PRINCIPAL
+    * Remover uma tarefa:
+        - a tarefa vem 
