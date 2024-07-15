@@ -11,3 +11,7 @@
 2- Clicar no BOTÃO e ADICIONAR A TAREFA e a HORA na PAGINA PRINCIPAL
     * Remover uma tarefa:
         - a tarefa vem 
+        - clico no botão de remover 
+        - remove a task da lista
+        # PROBLEMA:
+            - Quando as tasks chega em 0, cria uma array sem id, e minhas verificações estão sendo pelo id

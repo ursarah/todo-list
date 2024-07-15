@@ -6,25 +6,21 @@ export const Context = createContext()
 
 const ContextProvider = ({ children }) => {
     const [openModal, setOpenModal] = useState(false)
-    const [tasks, setTasks] = useState([{ id: 0, newTask: "", time: "" }])
+    const [tasks, setTasks] = useState([])
     const [newTask, setNewtask] = useState("")
     const [time, setTime] = useState("")
 
+
     const handlesubmit = (e) => {
         e.preventDefault()
+        console.log(tasks);
+        const idNumber = Math.random() * 100
 
-        const idNumber = Math.random()
-
-        tasks.forEach(task => task.id === 0 ? setTasks([{ id: idNumber, newTask: newTask, time: time }]) :
-            setTasks([...tasks, { id: idNumber, newTask: newTask, time: time }]))
-
+        tasks === null ? setTasks([{ id: idNumber, newTask: newTask, time: time }]) :
+            setTasks([...tasks, { id: idNumber, newTask: newTask, time: time }])
         setOpenModal(false)
     }
 
-    // const handleRemove = () => {
-    //     // exemplo: ele vai filtrar a task.id que for igual a dois e fazer uma nova Array sem a task.id = 2
-
-    // }
     return (
         <Context.Provider value={{ openModal, setOpenModal, tasks, setTasks, newTask, setNewtask, time, setTime, handlesubmit }}>
             {children}
