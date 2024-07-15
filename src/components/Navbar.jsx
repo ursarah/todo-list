@@ -17,7 +17,7 @@ const Navbar = () => {
                 <button className="bg-blue-300 rounded-full shadow-xl p-4 hover:shadow-none hover:bg-blue-200" onClick={() => setOpenModal(true)}><FaPlus /></button>
             </div>
             {tasks.length === 0 ?
-                <div className="text-sm text-slate-400">no tasks</div>
+                <div className="text-sm text-slate-400">no task</div>
                 :
                 <div className="text-sm text-slate-400">{tasks.length} tasks</div>
 

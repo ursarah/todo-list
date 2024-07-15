@@ -15,3 +15,4 @@
         - remove a task da lista
         # PROBLEMA:
             - Quando as tasks chega em 0, cria uma array sem id, e minhas verificações estão sendo pelo id
+            - Depois que a tasks filtrada chega a zero ele não da mais submit nas news tasks

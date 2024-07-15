@@ -24,7 +24,7 @@ const NewTask = () => {
                     </div>
                     <div className="flex flex-col">
                         <label className="mt-5">What time?</label>
-                        <input className="mt-3 mb-4 px-1 border-b-2 focus:outline-none" type="number" placeholder="00:00" name="time" onChange={(e) => setTime(e.target.value)} />
+                        <input className="mt-3 mb-4 px-1 border-b-2 focus:outline-none" type="text" placeholder="00:00" name="time" onChange={(e) => setTime(e.target.value)} />
                     </div>
                 </div>
                 <p>{error}</p>
