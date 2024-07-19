@@ -1,18 +1,10 @@
-1- Escrever no INPUT a TAREFA e a HORA
-    * Pegar o que escreve nos inputs 
-        -fiz isso com onChange nos inputs
-    * Guardar tudo num objeto
-        -como posso guardar num objeto?X
-        -com spread não da pq vai adicionar um objeto vazio no primeiro submit que mandoX
-        -preciso fazer com que:
-            # não repita
-            # não adicione um objeto em branco X
-    * Colocar o que escreve na pagina principal
-2- Clicar no BOTÃO e ADICIONAR A TAREFA e a HORA na PAGINA PRINCIPAL
-    * Remover uma tarefa:
-        - a tarefa vem 
-        - clico no botão de remover 
-        - remove a task da lista
-        # PROBLEMA:
-            - Quando as tasks chega em 0, cria uma array sem id, e minhas verificações estão sendo pelo id
-            - Depois que a tasks filtrada chega a zero ele não da mais submit nas news tasks
+handleClick:
+    - Recebe um argumento que se chama id que é o id da task individual
+    - Na função ele vai:
+        * Criar um novo array usando map
+        * Nas condições do map para criar o array ele vai:
+            - Pegar task.id e comparar com id que veio como argumento
+            - Se eles forem iguais:
+                # criar um novo objeto com as propiedades do antigo objeto(usando spread) mudando só o checked para a negativa do antigo
+            - se não forem iguais:
+                # as proximas arrays que não forem iguais vão continuar a mesma coisa sem mudar o estado

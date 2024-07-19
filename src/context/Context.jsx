@@ -9,15 +9,13 @@ const ContextProvider = ({ children }) => {
     const [tasks, setTasks] = useState([])
     const [newTask, setNewtask] = useState("")
     const [time, setTime] = useState("")
-    let tasksFilter = []
 
     const handleRemove = (id) => {
         // exemplo: ele vai filtrar a task.id que for igual a dois e fazer uma nova Array sem a task.id = 2
 
-        tasksFilter = tasks.filter(task => task.id !== id)
+        const tasksFilter = tasks.filter(task => task.id !== id)
         setTasks(tasksFilter)
     }
-
 
     const handlesubmit = (e) => {
         e.preventDefault()
@@ -28,8 +26,14 @@ const ContextProvider = ({ children }) => {
         setOpenModal(false)
     }
 
+    const handleClick = (id) => {
+        // caso for falso as outras tasks ainda vão existir 
+        const newArr = tasks.map(task => task.id === id ? { ...task, checked: !task.checked } : task)
+        setTasks(newArr);
+    }
+
     return (
-        <Context.Provider value={{ openModal, setOpenModal, tasks, setTasks, newTask, setNewtask, time, setTime, handlesubmit, handleRemove }}>
+        <Context.Provider value={{ openModal, setOpenModal, tasks, setTasks, newTask, setNewtask, time, setTime, handlesubmit, handleRemove, handleClick }}>
             {children}
         </Context.Provider>
     )
