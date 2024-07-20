@@ -19,8 +19,10 @@ const Navbar = () => {
             {tasks.length === 0 ?
                 <div className="text-sm text-slate-400">no task</div>
                 :
-                <div className="text-sm text-slate-400">{tasks.length} tasks</div>
+                <>
+                    {tasks.length === 1 ? <div className="text-sm text-slate-400">{tasks.length} task</div> : <div className="text-sm text-slate-400">{tasks.length} tasks</div>}
 
+                </>
             }
             <Modal show={openModal}>
                 <NewTask />
