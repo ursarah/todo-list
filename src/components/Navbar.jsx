@@ -6,7 +6,7 @@ import { Context } from "../context/Context";
 
 const Navbar = () => {
     let month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    let week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    let week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     const { tasks, openModal, setOpenModal } = useContext(Context)
 
 
@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         < >
             <div className="flex items-center gap-x-24">
-                <h2 className="text-2xl font-bold text-blue-300">{week[new Date().getDay() - 1]}, {new Date().getDate()} {month[new Date().getMonth()]}</h2>
+                <h2 className="text-2xl font-bold text-blue-300">{week[new Date().getDay()]}, {new Date().getDate()} {month[new Date().getMonth()]}</h2>
                 {/* Add task */}
                 <button className="bg-blue-300 rounded-full shadow-xl p-4 hover:shadow-none hover:bg-blue-200" onClick={() => setOpenModal(true)}><FaPlus /></button>
             </div>

@@ -17,7 +17,7 @@ const ContextProvider = ({ children }) => {
         setTasks(tasksFilter)
     }
 
-    const handlesubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
         const idNumber = Math.random() * 100
 
@@ -33,7 +33,7 @@ const ContextProvider = ({ children }) => {
     }
 
     return (
-        <Context.Provider value={{ openModal, setOpenModal, tasks, setTasks, newTask, setNewtask, time, setTime, handlesubmit, handleRemove, handleClick }}>
+        <Context.Provider value={{ openModal, setOpenModal, tasks, setTasks, newTask, setNewtask, time, setTime, handleSubmit, handleRemove, handleClick }}>
             {children}
         </Context.Provider>
     )
