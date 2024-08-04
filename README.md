@@ -6,7 +6,7 @@ https://todo-list-one-liard-31.vercel.app/
 
 
 ## Descrição
-- Esse é um projeto de lista de afazeres onde visa adicionar uma tarefa com o horario que deseja executar ela, ela é bastante util para quando você deseja executar a tarefa mas esquece ao çongo do dia.
+- Esse é um projeto de lista de afazeres onde visa adicionar uma tarefa com o horario que deseja executar ela, ela é bastante util para quando você deseja executar a tarefa mas esquece ao longo do dia.
 ## Instalação
 
 - Instale todo-list com git clone
